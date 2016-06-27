@@ -1,0 +1,24 @@
+{
+  "name": "sms2mail",
+  "version": "0.1.0",
+  "description": "SMS Gateway for Huawei E303",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "mabels/sms2mail"
+  },
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/mabels/sms2mail/issues"
+  },
+  "homepage": "https://github.com/mabels/sms2mail#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "xml2js": "0.4.16",
+    "simplesmtp": "0.3.35"
+  },
+  "publishConfig": {
+    "tag": "next"
+  }
+}
