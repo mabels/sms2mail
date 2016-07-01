@@ -142,10 +142,12 @@ observerSmsSource(10000, (msg, completed) => {
     });
   });
   client.on("rcptFailed", function(addresses){
+    client.quit();
     console.error("The following addresses were rejected: ", addresses);
     completed();
   });
   client.on("error", function(error){
+    client.quit();
     console.error(error);
     completed();
   });
@@ -164,6 +166,7 @@ observerSmsSource(10000, (msg, completed) => {
     client.end();
   });
   client.on("ready", (success, response) => {
+    client.quit();
     if(success){
       console.error("The message was transmitted successfully with "+response);
       setRead(msg, completed);
